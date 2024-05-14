@@ -1,0 +1,16 @@
+name: TesteMAIN
+on:
+  push:
+    branches: [ "MAIN" ]
+  pull_request:
+    branches: [ "MAIN" ]
+jobs:
+ # Task com nome BUILD
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run a mensagem branch
+        run: echo Usando a Branch MAIN!
+      - name: Run mensagem final
+        run: echo EU AMO DEVOPS
