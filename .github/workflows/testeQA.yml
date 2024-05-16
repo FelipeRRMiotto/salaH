@@ -1,0 +1,16 @@
+name: TesteQA
+on:
+  push:
+    branches: [ "QA" ]
+  pull_request:
+    branches: [ "QA" ]
+jobs:
+ # Task com nome BUILD
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run a mensagem branch
+        run: echo Usando a Branch de QA
+      - name: Run mensagem final
+        run: echo EU AMO DEVOPS
